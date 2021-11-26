@@ -142,9 +142,9 @@ public class GameScene extends Scene {
 
     public void moveFoes(){
         for(Foe foe : foelist) {
+            foe.attitude=0;//Le foe mort redevient vivant.
             if (foe.getAnimatedImage().getX()<0) {
                 foe.update();
-                foe.attitude=0; //Le foe mort redevient vivant.
             }
             foe.getAnimatedImage().setX(foe.getAnimatedImage().getX() - 5);
         }
